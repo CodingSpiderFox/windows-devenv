@@ -108,6 +108,8 @@ code --install-extension rust-lang.rust
 Install-WindowsFeature -name Telnet-Client
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
 
+reg import .\Hide_Cortana_button_on_taskbar.reg
+
 cd C:\Users\user\Downloads
 Invoke-WebRequest -OutFile "user.js" -Uri https://bitbucket.org/CodingSpiderFox/linux-devenv/raw/HEAD/home/user/firefox/additional_forwk.js
 $profileFolder=Get-ChildItem "C:\Users\user\AppData\Roaming\Mozilla\Firefox\Profiles" -filter "*default-release*" -Directory |  % { $_.fullname }
