@@ -5,8 +5,6 @@ git.exe config --global user.email "codingspiderfox@gmail.com"
 
 start ms-settings:nightlight
 
-xcopy profile.ps1 %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
-
 .\install_chocolatey.ps1
 
 del "C:\Users\user\Desktop\Microsoft Edge.lnk"
