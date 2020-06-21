@@ -105,6 +105,7 @@ code --install-extension eamodio.gitlens
 code --install-extension technosophos.vscode-helm
 code --install-extension rust-lang.rust
 code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode.powershell
 
 Install-WindowsFeature -name Telnet-Client
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
