@@ -106,6 +106,7 @@ code --install-extension technosophos.vscode-helm
 code --install-extension rust-lang.rust
 
 Install-WindowsFeature -name Telnet-Client
+Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
 
 cd C:\Users\user\Downloads
 Invoke-WebRequest -OutFile "user.js" -Uri https://bitbucket.org/CodingSpiderFox/linux-devenv/raw/HEAD/home/user/firefox/additional_forwk.js
