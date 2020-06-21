@@ -1,5 +1,8 @@
 ### Download/install software
 
+git.exe config --global user.name "codingspiderfox"
+git.exe config --global user.email "codingspiderfox@gmail.com"
+
 start ms-settings:nightlight
 
 xcopy profile.ps1 %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
@@ -45,9 +48,6 @@ choco install -y postman
 choco install -y mobaxterm
 choco install -y tuxguitar
 choco install -y reaper
-
-"C:\Program Files\Git\bin\git.exe" config --global user.name "codingspiderfox"
-"C:\Program Files\Git\bin\git.exe" config --global user.email "codingspiderfox@gmail.com"
 
 rmdir "C:\Users\user\Documents\REAPER Media"
 
@@ -106,6 +106,21 @@ code --install-extension technosophos.vscode-helm
 code --install-extension rust-lang.rust
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.powershell
+
+curl.exe -L -o ubuntu.appx https://aka.ms/wsl-ubuntu-1804
+Add-AppxPackage .\ubuntu.appx
+#del .\ubuntu.appx
+$CheckNewScriptFeature = "Please check whether WSL ubuntu distribution was successfully downloaded and installed, then remove this request from script, uncomment the del .appx instruction above and push changes to git"
+$Prompt8 = [Windows.MessageBox]::Show($CheckNewScriptFeature, "Install check", $Button, $Warn)
+Switch ($Prompt8) {
+    Yes {
+        
+        Write-Host ""
+    }
+    No {
+        Exit
+    }
+}
 
 Install-WindowsFeature -name Telnet-Client
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
