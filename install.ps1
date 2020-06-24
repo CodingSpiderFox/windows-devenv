@@ -105,6 +105,8 @@ code --install-extension rust-lang.rust
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.powershell
 
+curl.exe -L -o ShadowSetup.exe https://update.shadow.tech/launcher/prod/win/x64/ShadowSetup.exe
+.\ShadowSetup.exe
 curl.exe -L -o ubuntu.appx https://aka.ms/wsl-ubuntu-1804
 Add-AppxPackage .\ubuntu.appx
 #del .\ubuntu.appx
