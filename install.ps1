@@ -46,8 +46,7 @@ choco install -y postman
 choco install -y mobaxterm
 choco install -y tuxguitar
 choco install -y reaper
-
-rmdir "C:\Users\user\Documents\REAPER Media"
+choco install -y reaper-sws-extension
 
 #choco install -y jdk8
 #choco install -y jre8
@@ -131,7 +130,12 @@ cd C:\Users\user\Downloads
 Invoke-WebRequest -OutFile "user.js" -Uri https://bitbucket.org/CodingSpiderFox/linux-devenv/raw/HEAD/home/user/firefox/additional_forwk.js
 $profileFolder=Get-ChildItem "C:\Users\user\AppData\Roaming\Mozilla\Firefox\Profiles" -filter "*default-release*" -Directory |  % { $_.fullname }
 xcopy user.js "$profileFolder"
-setx /M PATH "$Env:PATH;C:\Users\user\windows-devenv\home\user\aliases;C:\Program Files\Git\bin;C:\ProgramData\chocolatey\bin"
+setx /M PATH "$Env:PATH;C:\Users\user\windows-devenv\home\user\aliases;C:\Program Files\Git\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\REAPER (x64)"
+
+# reaper must be started once so the configuration directory under AppData\Roaming is created
+cmd /c "C:\Program Files\REAPER (x64)\reaper.exe"
+rmdir "C:\Users\user\Documents\REAPER Media"
+xcopy /Y "home\user\AppData\Roaming\REAPER\*.*" "C:\Users\user\AppData\Roaming\REAPER\"
 
 Invoke-WebRequest -OutFile "ublock.xpi" -Uri https://addons.mozilla.org/firefox/downloads/latest/ublock-origin
 Invoke-WebRequest -OutFile "https.xpi" -Uri https://addons.mozilla.org/firefox/downloads/latest/https-everywhere
