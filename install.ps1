@@ -11,6 +11,7 @@ del "C:\Users\user\Desktop\Microsoft Edge.lnk"
 
 choco install -y choco-upgrade-all-at-startup
 choco install -y powertoys
+choco install -y google-backup-and-sync
 choco install -y firefox
 choco install -y libreoffice
 choco install -y veracrypt
