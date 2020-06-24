@@ -129,7 +129,7 @@ cd C:\Users\user\Downloads
 Invoke-WebRequest -OutFile "user.js" -Uri https://bitbucket.org/CodingSpiderFox/linux-devenv/raw/HEAD/home/user/firefox/additional_forwk.js
 $profileFolder=Get-ChildItem "C:\Users\user\AppData\Roaming\Mozilla\Firefox\Profiles" -filter "*default-release*" -Directory |  % { $_.fullname }
 xcopy user.js "$profileFolder"
-setx /M PATH "$Env:PATH;C:\Users\user\windows-devenv\home\user\aliases;C:\Program Files\Git\bin"
+setx /M PATH "$Env:PATH;C:\Users\user\windows-devenv\home\user\aliases;C:\Program Files\Git\bin;C:\ProgramData\chocolatey\bin"
 
 Invoke-WebRequest -OutFile "ublock.xpi" -Uri https://addons.mozilla.org/firefox/downloads/latest/ublock-origin
 Invoke-WebRequest -OutFile "https.xpi" -Uri https://addons.mozilla.org/firefox/downloads/latest/https-everywhere
