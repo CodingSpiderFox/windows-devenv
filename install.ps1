@@ -47,6 +47,7 @@ choco install -y postman
 choco install -y mobaxterm
 choco install -y tuxguitar
 choco install -y reaper
+choco install -y pia
 choco install -y reaper-sws-extension
 
 #choco install -y jdk8
