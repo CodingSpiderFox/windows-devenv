@@ -15,6 +15,7 @@ choco install -y google-backup-and-sync
 choco install -y firefox
 choco install -y libreoffice
 choco install -y veracrypt
+choco install -y winpcap
 choco install -y kdiff3
 choco install -y vscode
 choco install -y chromium
