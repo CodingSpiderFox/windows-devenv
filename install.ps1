@@ -20,7 +20,6 @@ choco install -y kdiff3
 choco install -y vscode
 choco install -y chromium
 choco install -y correttojdk
-choco install -y discord
 choco install -y 7zip.install
 choco install -y vlc
 choco install -y git.install
@@ -46,10 +45,15 @@ choco install -y gpg4win
 choco install -y telegram.install
 choco install -y postman
 choco install -y mobaxterm
+choco install -y pia
+
 choco install -y tuxguitar
 choco install -y reaper
-choco install -y pia
 choco install -y reaper-sws-extension
+
+choco install -y steam
+choco install -y discord
+choco install -y origin
 
 #choco install -y jdk8
 #choco install -y jre8
