@@ -77,6 +77,7 @@ cd ..
 #################################
 ### Install vscode extensions ###
 #################################
+code --install-extension kameshkotwani.google-search
 code --install-extension hashicorp.terraform
 code --install-extension samuelcolvin.jinjahtml
 code --install-extension coolbear.systemd-unit-file
