@@ -9,6 +9,10 @@ start ms-settings:nightlight
 
 del "C:\Users\user\Desktop\Microsoft Edge.lnk"
 
+choco install -y texstudio
+choco install -y texnicenter
+choco install -y strawberryperl
+choco install -y foxitreader
 choco install -y choco-upgrade-all-at-startup
 choco install -y powertoys
 choco install -y google-backup-and-sync
