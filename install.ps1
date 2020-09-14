@@ -9,6 +9,10 @@ start ms-settings:nightlight
 
 del "C:\Users\user\Desktop\Microsoft Edge.lnk"
 
+choco install -y texstudio
+choco install -y texnicenter
+choco install -y strawberryperl
+choco install -y foxitreader
 choco install -y choco-upgrade-all-at-startup
 choco install -y powertoys
 choco install -y google-backup-and-sync
@@ -77,6 +81,8 @@ cd ..
 #################################
 ### Install vscode extensions ###
 #################################
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension james-yu.latex-workshop
 code --install-extension kameshkotwani.google-search
 code --install-extension hashicorp.terraform
 code --install-extension samuelcolvin.jinjahtml
