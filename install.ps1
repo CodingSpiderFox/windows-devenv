@@ -81,6 +81,7 @@ cd ..
 #################################
 ### Install vscode extensions ###
 #################################
+code --install-extension tabnine.tabnine-vscode
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension james-yu.latex-workshop
 code --install-extension kameshkotwani.google-search
