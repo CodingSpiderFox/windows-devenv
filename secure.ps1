@@ -1,3 +1,5 @@
+.\secure\registry-tweaks\Protect_LSASS.reg
+
 #copied from https://eksith.wordpress.com/2015/08/06/how-to-remove-flash-from-windows-10/#comment-58104 r-burt
 # take ownership
 takeown /f C:\Windows\SysWOW64\Macromed\Flash\*.*
