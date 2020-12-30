@@ -24,6 +24,8 @@ choco install -y kdiff3
 choco install -y vscode
 choco install -y chromium
 choco install -y correttojdk
+choco install -y corretto11jdk
+choco install -y corretto8jdk
 choco install -y 7zip.install
 choco install -y vlc
 choco install -y git.install
