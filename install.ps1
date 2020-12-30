@@ -121,12 +121,36 @@ code --install-extension ms-vscode.powershell
 
 curl.exe -L -o ShadowSetup.exe https://update.shadow.tech/launcher/prod/win/x64/ShadowSetup.exe
 .\ShadowSetup.exe
-curl.exe -L -o ubuntu.appx https://aka.ms/wsl-ubuntu-1804
-Add-AppxPackage .\ubuntu.appx
-#del .\ubuntu.appx
-$CheckNewScriptFeature = "Please check whether WSL ubuntu distribution was successfully downloaded and installed, then remove this request from script, uncomment the del .appx instruction above and push changes to git"
-$Prompt8 = [Windows.MessageBox]::Show($CheckNewScriptFeature, "Install check", $Button, $Warn)
+
+# Install WSL https://docs.microsoft.com/de-de/windows/wsl/install-win10#step-1---enable-the-windows-subsystem-for-linux
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+# Upgrade to WSL 2 https://docs.microsoft.com/de-de/windows/wsl/install-win10#step-2---update-to-wsl-2
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+.\wsl_update_x64.msi
+wsl --set-default-version 2
+
+curl.exe -L -o ubuntu.appx https://aka.ms/wslubuntu2004
+Add-AppPackage .\ubuntu.appx
+del .\ubuntu.appx
+
+$CheckAutoUpdateWSL2 = "Please setup autoupdate according to https://web.archive.org/web/20201026152456/http://www.riosec.com/articles/automatingupdatesforbashonubuntuonwindows10"
+$Prompt8 = [Windows.MessageBox]::Show($CheckAutoUpdateWSL2, "Install check", $Button, $Warn)
 Switch ($Prompt8) {
+    Yes {
+        
+        Write-Host ""
+    }
+    No {
+        Exit
+    }
+}
+
+
+
+$CheckNewScriptFeature = "Please check whether WSL ubuntu distribution was successfully downloaded and installed, then remove this request from script, uncomment the del .appx instruction above and push changes to git"
+$Prompt9 = [Windows.MessageBox]::Show($CheckNewScriptFeature, "Install check", $Button, $Warn)
+Switch ($Prompt9) {
     Yes {
         
         Write-Host ""
