@@ -31,7 +31,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>%windir%\System32\wsl.exe</Command>
-      <Arguments>-d Ubuntu sudo apt-get update &amp;&amp; sudo apt-get -y upgrade</Arguments>
+      <Arguments>-d Ubuntu-20.04 sudo apt-get update &amp;&amp; sudo apt-get -y upgrade</Arguments>
     </Exec>
   </Actions>
 </Task>
