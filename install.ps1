@@ -41,6 +41,8 @@ choco install -y virtualbox
 choco install -y cygwin
 choco install -y wireshark
 choco install -y openhardwaremonitor
+choco install -y crystaldiskinfo
+choco install -y crystaldiskmark
 choco install -y spotify
 choco install -y jq
 choco install -y tortoisegit
