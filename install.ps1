@@ -2,6 +2,9 @@
 
 git.exe config --global user.name "codingspiderfox"
 git.exe config --global user.email "codingspiderfox@gmail.com"
+git config --global core.excludesFile 'C:\User\user\gitignore_global'
+git config --global pull.ff only
+git remote set-url origin ssh://git@github.com/CodingSpiderFox/windows-devenv
 
 start ms-settings:nightlight
 
