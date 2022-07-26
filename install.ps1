@@ -148,6 +148,19 @@ wsl -d Ubuntu-20.04 /bin/sh -c "sudo apt-get update && sudo apt-get -y upgrade"
 schtasks /create /xml tasks/Task-LinuxUpgrade.xml /tn UpdateLinux
 schtasks /run /i /tn "UpdateLinux"`
 
+$RememberPowerSettings = "Remember to set power button action to sleep and disallow mouse and keyboard to wake up computer"
+$PromptPower = [Windows.MessageBox]::Show($RememberPowerSettings, "Reminder", $Button, $Warn)
+Switch ($PromptPower) {
+    Yes {
+        
+        Write-Host ""
+    }
+    No {
+        Exit
+    }
+}
+
+
 $CheckAutoUpdateWSL2 = "Please setup autoupdate according to https://web.archive.org/web/20201026152456/http://www.riosec.com/articles/automatingupdatesforbashonubuntuonwindows10"
 $Prompt8 = [Windows.MessageBox]::Show($CheckAutoUpdateWSL2, "Install check", $Button, $Warn)
 Switch ($Prompt8) {
