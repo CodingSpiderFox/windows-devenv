@@ -7,6 +7,12 @@ git config --global pull.ff only
 git config --global core.editor "code --wait --new-window"
 git remote set-url origin ssh://git@github.com/CodingSpiderFox/windows-devenv
 
+echo "[diff]"
+echo "    tool = default-difftool"
+echo "[difftool \"default-difftool\"]"
+echo "    cmd = code --new-window --wait --diff $LOCAL $REMOTE"
+git config --global -e
+
 start ms-settings:nightlight
 
 .\install_chocolatey.ps1
@@ -130,6 +136,8 @@ code --install-extension peterjausovec.vscode-docker
 code --install-extension eamodio.gitlens
 code --install-extension technosophos.vscode-helm
 code --install-extension rust-lang.rust
+code --install-extension rust-lang.rust-analyzer
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.powershell
 
