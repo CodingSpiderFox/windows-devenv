@@ -47,6 +47,7 @@ choco install -y google-backup-and-sync
 choco install -y libreoffice
 
 # Dev
+choco install -y nvm
 choco install -y kubernetes-cli
 choco install -y minikube
 choco install -y strawberryperl
