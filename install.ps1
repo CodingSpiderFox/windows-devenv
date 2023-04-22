@@ -12,70 +12,76 @@ start ms-settings:nightlight
 
 del "C:\Users\user\Desktop\Microsoft Edge.lnk"
 
-choco install -y texstudio
-choco install -y texnicenter
-choco install -y strawberryperl
-choco install -y foxitreader
+# Base
 choco install -y choco-upgrade-all-at-startup
-choco install -y powertoys
-choco install -y google-backup-and-sync
 choco install -y firefox
-choco install -y libreoffice
-choco install -y veracrypt
-choco install -y winpcap
-choco install -y kdiff3
-choco install -y vscode
 choco install -y chromium
-choco install -y correttojdk
-choco install -y corretto11jdk
-choco install -y corretto8jdk
 choco install -y 7zip.install
-choco install -y vlc
-choco install -y git.install
-choco install -y sysinternals
-choco install -y wget
-choco install -y curl
 choco install -y filezilla
-choco install -y inkscape
-choco install -y gimp
-choco install -y python
-choco install -y thunderbird
 choco install -y virtualbox
-choco install -y cygwin
-choco install -y wireshark
+choco install -y pia
+#choco install nvidia-display-driver
+choco install -y git.install
+choco install -y winmerge
+choco install -y gpg4win
+choco install -y mobaxterm
+choco install -y sysinternals
 choco install -y openhardwaremonitor
 choco install -y crystaldiskinfo
 choco install -y crystaldiskmark
-choco install -y spotify
-choco install -y jq
-choco install -y tortoisegit
-choco install -y maven
-choco install -y winmerge
-choco install -y rufus
-choco install -y gpg4win
-choco install -y telegram.install
-choco install -y postman
-choco install -y mobaxterm
-choco install -y pia
+choco install -y veracrypt
 
+# Office
+choco install -y thunderbird
+choco install -y texstudio
+choco install -y texnicenter
+choco install -y foxitreader
+choco install -y google-backup-and-sync
+choco install -y libreoffice
+
+# Dev
+choco install -y kubernetes-cli
+choco install -y minikube
+choco install -y strawberryperl
+choco install -y powertoys
+choco install -y winpcap
+choco install -y kdiff3
+choco install -y vscode
+choco install -y correttojdk
+choco install -y corretto11jdk
+choco install -y corretto8jdk
+choco install -y vlc
+choco install -y wget
+choco install -y curl
+choco install -y python
+choco install -y cygwin
+choco install -y wireshark
+choco install -y jq
+choco install -y maven
+choco install -y rufus
+choco install -y postman
+#choco install -y jdk17
+#choco install -y jre17
+#choco install intellijidea-community
+#choco install androidstudio
+#choco install vmware-workstation-player
+#choco install cmake
+#vs2019 community
+
+# Graphics
+choco install -y inkscape
+choco install -y gimp
+
+# Music
 choco install -y tuxguitar
 choco install -y reaper
 choco install -y reaper-sws-extension
 
+# Entertainment
+choco install -y spotify
 choco install -y steam
 choco install -y discord
 choco install -y origin
-
-#choco install -y jdk8
-#choco install -y jre8
-#choco install intellijidea-community
-#choco install androidstudio
-#choco install vmware-workstation-player
-#choco install -y gitkraken
-#choco install -y flutter --pre 
-#choco install nvidia-display-driver
-#choco install cmake
-#vs2019 community
 #choco install -y cpu-z
 #choco install -y gpu-z
 #choco install -y logitechgaming
