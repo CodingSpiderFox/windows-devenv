@@ -150,7 +150,7 @@ curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/
 .\wsl_update_x64.msi
 wsl --set-default-version 2
 
-curl.exe -L -o ubuntu.appx https://aka.ms/wslubuntu2004
+curl.exe -L -o ubuntu.appx https://aka.ms/wslubuntu2204
 Add-AppPackage .\ubuntu.appx
 del .\ubuntu.appx
 
