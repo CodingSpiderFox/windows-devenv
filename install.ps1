@@ -156,8 +156,8 @@ del .\ubuntu.appx
 
 #Allow unattended upgrades of WSL machine via windows Task scheduler
 #First of all we need permissions
-wsl -d Ubuntu-20.04 /bin/sh -c "echo '%sudo ALL=NOPASSWD:/usr/bin/apt-get update,/usr/bin/apt-get -y upgrade,/usr/bin/apt update,/usr/bin/apt -y upgrade' | sudo EDITOR='tee -a' visudo"
-wsl -d Ubuntu-20.04 /bin/sh -c "sudo apt-get update && sudo apt-get -y upgrade"
+wsl -d Ubuntu-22.04 /bin/sh -c "echo '%sudo ALL=NOPASSWD:/usr/bin/apt-get update,/usr/bin/apt-get -y upgrade,/usr/bin/apt update,/usr/bin/apt -y upgrade' | sudo EDITOR='tee -a' visudo"
+wsl -d Ubuntu-22.04 /bin/sh -c "sudo apt-get update && sudo apt-get -y upgrade"
 schtasks /create /xml tasks/Task-LinuxUpgrade.xml /tn UpdateLinux
 schtasks /run /i /tn "UpdateLinux"`
 
