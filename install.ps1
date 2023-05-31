@@ -41,7 +41,7 @@ choco install -y veracrypt
 # Office
 choco install -y thunderbird
 choco install -y texstudio
-choco install -y texnicenter
+#choco install -y texnicenter
 choco install -y foxitreader
 choco install -y google-backup-and-sync
 choco install -y libreoffice
