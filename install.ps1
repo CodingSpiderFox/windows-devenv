@@ -102,48 +102,45 @@ cd ..
 #################################
 ### Install vscode extensions ###
 #################################
-code --install-extension tabnine.tabnine-vscode
-code --install-extension ms-vscode-remote.remote-wsl
-code --install-extension james-yu.latex-workshop
-code --install-extension kameshkotwani.google-search
-code --install-extension hashicorp.terraform
-code --install-extension samuelcolvin.jinjahtml
-code --install-extension coolbear.systemd-unit-file
-code --install-extension aaron-bond.better-comments
-code --install-extension mathiasfrohlich.kotlin
-code --install-extension ms-python.python
-code --install-extension ms-vscode.powershell
-code --install-extension mrorz.language-gettext
-code --install-extension ms-vscode.go
-code --install-extension dotjoshjohnson.xml
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension webfreak.debug
-code --install-extension ms-vscode.cpptools
-code --install-extension thiagoabreu.vala
-code --install-extension vscjava.vscode-java-pack
-code --install-extension esbenp.prettier-vscode
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension dsznajder.es7-react-js-snippets
-code --install-extension msjsdiag.vscode-react-native
-code --install-extension eg2.tslint
-code --install-extension pivotal.vscode-boot-dev-pack
-code --install-extension zignd.html-css-class-completion
-code --install-extension gencer.html-slim-scss-css-class-completion
-code --install-extension abusaidm.html-snippets
-code --install-extension cssho.vscode-svgviewer
-code --install-extension jock.svg
-code --install-extension rogalmic.bash-debug
-code --install-extension peterjausovec.vscode-docker
-code --install-extension eamodio.gitlens
-code --install-extension technosophos.vscode-helm
-code --install-extension rust-lang.rust
-code --install-extension rust-lang.rust-analyzer
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-code --install-extension ms-vscode-remote.remote-wsl
-code --install-extension ms-vscode.powershell
-
-curl.exe -L -o ShadowSetup.exe https://update.shadow.tech/launcher/prod/win/x64/ShadowSetup.exe
-.\ShadowSetup.exe
+#code --install-extension tabnine.tabnine-vscode
+#code --install-extension ms-vscode-remote.remote-wsl
+#code --install-extension james-yu.latex-workshop
+#code --install-extension kameshkotwani.google-search
+#code --install-extension hashicorp.terraform
+#code --install-extension samuelcolvin.jinjahtml
+#code --install-extension coolbear.systemd-unit-file
+#code --install-extension aaron-bond.better-comments
+#code --install-extension mathiasfrohlich.kotlin
+#code --install-extension ms-python.python
+#code --install-extension ms-vscode.powershell
+#code --install-extension mrorz.language-gettext
+#code --install-extension ms-vscode.go
+#code --install-extension dotjoshjohnson.xml
+#code --install-extension ms-azuretools.vscode-docker
+#code --install-extension webfreak.debug
+#code --install-extension ms-vscode.cpptools
+#code --install-extension thiagoabreu.vala
+#code --install-extension vscjava.vscode-java-pack
+#code --install-extension esbenp.prettier-vscode
+#code --install-extension msjsdiag.debugger-for-chrome
+#code --install-extension dsznajder.es7-react-js-snippets
+#code --install-extension msjsdiag.vscode-react-native
+#code --install-extension eg2.tslint
+#code --install-extension pivotal.vscode-boot-dev-pack
+#code --install-extension zignd.html-css-class-completion
+#code --install-extension gencer.html-slim-scss-css-class-completion
+#code --install-extension abusaidm.html-snippets
+#code --install-extension cssho.vscode-svgviewer
+#code --install-extension jock.svg
+#code --install-extension rogalmic.bash-debug
+#code --install-extension peterjausovec.vscode-docker
+#code --install-extension eamodio.gitlens
+#code --install-extension technosophos.vscode-helm
+#code --install-extension rust-lang.rust
+#code --install-extension rust-lang.rust-analyzer
+#code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+#code --install-extension ms-vscode-remote.remote-wsl
+#code --install-extension ms-vscode.powershell
 
 # Install WSL https://docs.microsoft.com/de-de/windows/wsl/install-win10#step-1---enable-the-windows-subsystem-for-linux
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
