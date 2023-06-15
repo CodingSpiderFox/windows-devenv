@@ -7,6 +7,17 @@ git config --global pull.ff only
 git config --global core.editor "code --wait --new-window"
 git remote set-url origin ssh://git@github.com/CodingSpiderFox/windows-devenv
 
+#[core]
+#  editor = code --wait
+#[diff]
+#  tool = vscode
+#[difftool "vscode"]
+#  cmd = code --wait --diff $LOCAL $REMOTE
+#[merge]
+#  tool = vscode
+#[mergetool "vscode"]
+#  cmd = code --wait $MERGED
+
 echo "[diff]"
 echo "    tool = default-difftool"
 echo "[difftool \"default-difftool\"]"
