@@ -5,24 +5,22 @@ git config --global user.name "codingspiderfox"
 git config --global user.email "codingspiderfox@gmail.com"
 git config --global core.excludesFile 'C:\User\user\gitignore_global'
 git config --global pull.ff only
-git config --global core.editor "code --wait --new-window"
 git remote set-url origin ssh://git@github.com/CodingSpiderFox/windows-devenv
 
-#[core]
-#  editor = code --wait
-#[diff]
-#  tool = vscode
-#[difftool "vscode"]
-#  cmd = code --wait --diff $LOCAL $REMOTE
-#[merge]
-#  tool = vscode
-#[mergetool "vscode"]
-#  cmd = code --wait $MERGED
+$gitConfig = @"
+[core]
+  editor = code --wait --new-window
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff `$LOCAL `$REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait `$MERGED
+"@
+Write-Host $multilineString
 
-echo "[diff]"
-echo "    tool = default-difftool"
-echo "[difftool \"default-difftool\"]"
-echo "    cmd = code --new-window --wait --diff $LOCAL $REMOTE"
 git config --global -e
 
 start ms-settings:nightlight
