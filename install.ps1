@@ -1,5 +1,14 @@
 ### Download/install software
 choco install -y git
+choco install -y vscode
+
+# Add Git to the system's PATH if not already present
+$gitPath = (Get-Command git).Path
+$envPath = [Environment]::GetEnvironmentVariable('PATH', 'Machine')
+
+if (-not ($envPath -split ';' | Select-String -SimpleMatch $gitPath)) {
+    [Environment]::SetEnvironmentVariable('PATH', "$envPath;$gitPath", 'Machine')
+}
 
 git config --global user.name "codingspiderfox"
 git config --global user.email "codingspiderfox@gmail.com"
@@ -64,7 +73,6 @@ choco install -y strawberryperl
 choco install -y powertoys
 choco install -y winpcap
 choco install -y kdiff3
-choco install -y vscode
 choco install -y correttojdk
 choco install -y corretto11jdk
 choco install -y corretto8jdk
