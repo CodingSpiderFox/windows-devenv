@@ -1,4 +1,5 @@
 ### Download/install software
+choco install -y git
 
 git config --global user.name "codingspiderfox"
 git config --global user.email "codingspiderfox@gmail.com"
