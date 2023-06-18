@@ -13,12 +13,11 @@ if (-not ($envPath -split ';' | Select-String -SimpleMatch $gitPath)) {
 git config --global user.name "codingspiderfox"
 git config --global user.email "codingspiderfox@gmail.com"
 git config --global core.excludesFile 'C:\User\user\gitignore_global'
+git config --global core.editor "code --wait --new-window"
 git config --global pull.ff only
 git remote set-url origin ssh://git@github.com/CodingSpiderFox/windows-devenv
 
 $gitConfig = @"
-[core]
-  editor = code --wait --new-window
 [diff]
   tool = vscode
 [difftool "vscode"]
